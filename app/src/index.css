@@ -1,0 +1,108 @@
+body {
+    --accent: rgb(212, 64, 50);
+    --bg: rgb(45, 45, 45);
+    --bg-dark: rgb(34, 34, 34);
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--bg);
+    color: white;
+}
+
+/* app styles */
+.App {
+    max-width: 480px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+nav{
+    padding: 5px;
+}
+
+h1, h2, h3, a {
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent);
+}
+
+label {
+    display: inline;
+    margin-right: 4px;
+}
+
+label::after {
+    content: ' *';
+    color: var(--accent);
+}
+
+nav ul {
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.teams {
+    display: flex;
+    justify-content: space-between;
+}
+
+.team {
+    text-align: left;
+    background-color: var(--bg-dark);
+    margin: 16px 0;
+    padding: 16px;
+}
+
+.player {
+    border-top: 1px solid white;
+    margin-top: 16px;
+    padding-top: 16px;
+    max-width: 320px;
+}
+
+input[type="text"], select {
+    background-color: var(--bg);
+    border: 1px solid var(--bg);
+    padding: 8px;
+    outline: none;
+    color: white;
+    margin: 4px 0 8px 0;
+    display: block;
+}
+
+input[type="text"]:focus {
+    border: 1px solid white;
+}
+
+.character {
+    display: flex;
+    justify-content: space-between;
+}
+
+.scoreInput {
+    max-width: 40px;
+}
+
+button {
+    border: none;
+    padding: 8px 16px;
+    background-color: var(--accent);
+    float: right;
+    color: white;
+    text-transform: uppercase;
+    border-bottom: var(--bg);
+    cursor: pointer;
+    outline: none;
+}
