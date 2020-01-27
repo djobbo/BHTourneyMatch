@@ -11,11 +11,27 @@ class Set extends Component {
         };
 
         this.setTeamCount = (event) => {
-            this.setState({teamCount: event.target.value});
+            this.setState({
+                teamCount: event.target.value
+            });
         }
 
         this.setPlayerCount = (event) => {
-            this.setState({playerCount: event.target.value});
+            this.setState({
+                playerCount: event.target.value
+            });
+        }
+
+        this.setMatchContext = (team, player, context) => {
+            this.setState({
+                matchContext: { team: { player: { context } } }
+            })
+        }
+
+        this.onSubmit = (event) => {
+            this.setState({
+                output: ''
+            })
         }
     }
 
@@ -25,7 +41,7 @@ class Set extends Component {
 
         for (let i = 0; i < this.state.teamCount; i++) {
             const team = `team${i}`;
-            teams.push(<Team key={ team } team_id={ team } playerCount={ this.state.playerCount } />);
+            teams.push(<Team key={ team } team_id={ team } playerCount={ this.state.playerCount } setMatchContext={ this.setMatchContext } />);
         }
 
         return (

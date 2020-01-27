@@ -6,12 +6,13 @@ class Team extends Component {
     render() {
         const teamID = this.props.team_id;
         const playerCount = this.props.playerCount;
+        const setMatchContext = this.props.setMatchContext;
 
         const players = [];
 
         for (let i = 0; i < playerCount; i++) {
             const player = `${teamID}_player${i}`;
-            players.push(<Player key={ player } player_id={ player } />);
+            players.push(<Player key={ player } player_id={ player } setMatchContext={ setMatchContext } />);
         }
 
         return (
