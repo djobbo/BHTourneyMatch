@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
         <Navbar />
-        <Set />
+        <Set teamCount="2" playerCount="4" />
     </div>
   );
 }

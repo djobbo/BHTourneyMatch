@@ -14,8 +14,7 @@ body {
 
 /* app styles */
 .App {
-    max-width: 480px;
-    margin: 30px auto;
+    margin: 30px 64px;
     text-align: center;
 }
 
@@ -53,20 +52,33 @@ nav ul li {
     margin: 0 10px;
 }
 
-.teams {
+/* .teams {
     display: flex;
-    justify-content: space-between;
-}
+    justify-content: space-around;
+} */
 
 .team {
-    text-align: left;
+    text-align: center;
     background-color: var(--bg-dark);
     margin: 16px 0;
     padding: 16px;
 }
 
+
+.teamColorSelect {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid white;
+}
+
+.players {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
 .player {
-    border-top: 1px solid white;
     margin-top: 16px;
     padding-top: 16px;
     max-width: 320px;
