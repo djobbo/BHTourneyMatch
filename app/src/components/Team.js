@@ -4,15 +4,13 @@ import Player from './Player.js'
 
 class Team extends Component {
     render() {
-        const teamID = this.props.team_id;
+        const teamID = this.props.teamID;
         const playerCount = this.props.playerCount;
-        const setMatchContext = this.props.setMatchContext;
 
         const players = [];
 
         for (let i = 0; i < playerCount; i++) {
-            const player = `${teamID}_player${i}`;
-            players.push(<Player key={ player } player_id={ player } setMatchContext={ setMatchContext } />);
+            players.push(<Player key={ i } playerID={ `${teamID}-${i}` } teamID={ teamID } />);
         }
 
         return (
